@@ -22,4 +22,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/places', placesRouter);
 
-module.exports = app;
+module.exports = (req, res) => {
+  app(req, res);
+};
