@@ -3,7 +3,7 @@ var router = express.Router();
 
 require('../models/connection');
 const Place = require('../models/places');
-const { checkBody } = require('../../../../week6/morningnews-part5/backend/modules/checkBody');
+const { checkBody } = require('../modules/checkBody');
 
 router.post('/', (req, res) => {
     if(!checkBody(req.body, ['name'])) {
